@@ -1,0 +1,8 @@
+n := 144; // n the number whose square root we will calculate
+r := n; // r becomes the square root of n
+i := 1; // i is a loop iteration counter
+LOOP
+ r := (n/r + r)/2;
+ WHEN r*r – n < 1.0e-6 LEAVE;
+ i := i + 1
+AGAIN
